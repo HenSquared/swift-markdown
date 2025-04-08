@@ -620,7 +620,7 @@ struct MarkupParser {
         }
         
         let parser = cmark_parser_new(cmarkOptions)
-        
+        cmark_parser_attach_syntax_extension(parser, cmark_find_syntax_extension("footnote"))
         cmark_parser_attach_syntax_extension(parser, cmark_find_syntax_extension("table"))
         cmark_parser_attach_syntax_extension(parser, cmark_find_syntax_extension("strikethrough"))
         cmark_parser_attach_syntax_extension(parser, cmark_find_syntax_extension("tasklist"))
